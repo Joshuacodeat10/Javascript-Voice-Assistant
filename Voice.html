@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en" onload='recognition.start()'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robojosh</title>
+    <script src="Voice.js"></script>
+    <script src="jquery-2.2.3.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist\bootstrap-4.4.1-dist\css\bootstrap.css">   
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+    <script>
+    jQuery("#notepad").on("click", function (event) 
+  {      
+    document.dispatchEvent(new CustomEvent('funcIntraLaunch',
+    { 'detail': { task: 'run',
+               program: 'notepad.exe' } 
+    })); 
+  });
+</script>
+
+</head>
+<body>
+    <div class="container text-center">
+        <div class="col-lg-4">
+    <h1 class="text-center" style="font-family:corbel; color:white; " id="result"></h1>
+    <button id="btn" style="background-color: red; margin-top:100px;border:1px solid red; padding:20px; border-radius:100px;" onclick='recognition.start()' ></button>
+    <a href="#" id="notepad">Notepad</a>
+</div>
+
+</div>
+</body>
+</html> 
